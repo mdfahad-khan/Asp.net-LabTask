@@ -1,0 +1,311 @@
+﻿@{
+    ViewBag.Title = "Home";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style>
+        /* Add custom styles here */
+        .jumbotron {
+            background: url('https://assets2.razerzone.com/images/og-image/pc-accessories-category-OGimage.jpg') center/cover no-repeat;
+            color: #fff;
+            text-align: center;
+            padding: 150px 0;
+            margin-bottom: 0;
+        }
+
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 100px 0;
+        }
+
+        .featured-card img {
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .featured-card:hover {
+            transform: scale(1.05);
+        }
+
+        .testimonial {
+            background-color: #f8f9fa;
+            padding: 80px 0;
+        }
+
+            .testimonial .carousel-inner {
+                text-align: center;
+            }
+
+        .newsletter {
+            background-color: #343a40;
+            color: #fff;
+            padding: 80px 0;
+        }
+
+            .newsletter h2 {
+                margin-bottom: 40px;
+            }
+
+            .newsletter form {
+                max-width: 400px;
+                margin: 0 auto;
+            }
+
+        .pricing {
+            background-color: #f8f9fa;
+            padding: 80px 0;
+        }
+
+            .pricing .card {
+                border: none;
+                border-radius: 10px;
+                transition: transform 0.3s ease-in-out;
+            }
+
+                .pricing .card:hover {
+                    transform: scale(1.05);
+                }
+
+            .pricing .card-header {
+                background-color: #007bff;
+                color: #fff;
+                border-radius: 10px 10px 0 0;
+            }
+
+            .pricing .card-body {
+                background-color: #fff;
+                border-radius: 0 0 10px 10px;
+            }
+
+        .contact {
+            background-color: #343a40;
+            color: #fff;
+            padding: 80px 0;
+        }
+
+            .contact form {
+                max-width: 600px;
+                margin: 0 auto;
+            }
+    </style>
+    <title>Home Page</title>
+</head>
+<body>
+
+    <!-- Jumbotron Section with Parallax Effect -->
+    <div class="jumbotron">
+        <div class="container">
+            <h1 class="display-4 font-weight-bold">Welcome to Drem360</h1>
+            <h3> <p class="lead font-weight-bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis commodo, libero eget </p></h3>
+            <a href="#" class="btn  btn-success">Shop Now</a>
+        </div>
+    </div>
+
+    <!-- Featured Cards Section -->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card featured-card shadow">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzFOhkJ6u9wi-Nck9L2e2QbkQM5x6uhgIuIi5SJPsb6LWoYY3Ifh7poVlkpmHNgbiB8i0&usqp=CAU" class="card-img-top" alt="Product 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Gaming Mouse</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <div class="d-flex justify-content-between">
+                            <div class="ratings">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star-half-alt text-warning"></i>
+                                <i class="far fa-star text-warning"></i>
+                            </div>
+                            <span class="text-muted">800 tk</span>
+                        </div>
+                        <a href="#" class="btn btn-primary mt-2">View Details</a>
+                        <button class="btn btn-success mt-2" onclick="addToCart(1)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more product cards as needed -->
+            <div class="col-md-4">
+                <div class="card featured-card shadow">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRriWSEljohKL83UG4xG0kVYkXAHGyH2QeBSg&usqp=CAU" class="card-img-top" alt="Product 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Gaming Headphone</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <div class="d-flex justify-content-between">
+                            <div class="ratings">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star-half-alt text-warning"></i>
+                                <i class="far fa-star text-warning"></i>
+                            </div>
+                            <span class="text-muted">1800 tk</span>
+                        </div>
+                        <a href="#" class="btn btn-primary mt-2">View Details</a>
+                        <button class="btn btn-success mt-2" onclick="addToCart(1)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card featured-card shadow">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuXAasm_CAoBYEdedlJmMDTa-MJPkAFTivmQ&usqp=CAU" class="card-img-top" alt="Product 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Gaming Keyboard</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <div class="d-flex justify-content-between">
+                            <div class="ratings">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star-half-alt text-warning"></i>
+                                <i class="far fa-star text-warning"></i>
+                            </div>
+                            <span class="text-muted">2000 tk</span>
+                        </div>
+                        <a href="#" class="btn btn-primary mt-2">View Details</a>
+                        <button class="btn btn-success mt-2" onclick="addToCart(1)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- JavaScript for Add to Cart -->
+    <script>
+        function addToCart(productId) {
+            // Implement your logic to add the product to the cart
+            alert('Product added to cart: ' + productId);
+        }
+    </script>
+
+
+    <!-- Testimonials Section -->
+    <div class="testimonial bg-gradient">
+        <div class="container">
+            <h2>What Our Customers Say</h2>
+            <div id="testimonialCarousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <p class="lead">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis commodo, libero eget sagittis fermentum, ex elit dignissim lacus."</p>
+                        <p class="font-weight-bold">Md Fahad Khan</p>
+                    </div>
+                    <div class="carousel-item">
+                        <p class="lead">"Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</p>
+                        <p class="font-weight-bold">Evan Ahmed Fahad</p>
+                    </div>
+                    <div class="carousel-item">
+                        <p class="lead">"Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."</p>
+                        <p class="font-weight-bold">Sahilur Rahman</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Call-to-Action Section with Parallax Effect -->
+    <div class="parallax" style="background-image: url('https://awesomestufftobuy.com/wp-content/uploads/2023/02/razer-blackwidow-v4-pro-gaming-keyboard-450x450.jpg'); ">
+        <div class="container text-center">
+            <h2 class="text-light">Explore Our Latest Collections</h2>
+            <a href="#" class="btn btn-outline-light btn-lg mt-3">Discover Now</a>
+        </div>
+    </div>
+
+    <!-- Pricing Section -->
+    <div class="pricing">
+        <div class="container">
+            <h2 class="text-center mb-5">Our Service</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card text-center">
+                        <div class="card-header">
+                            <h5 class="font-weight-bold">Fast Delivery</h5>
+                        </div>
+                        <div class="card-body">
+                            <h2 class="card-title">Get you Product</h2>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check"></i> Feature 1</li>
+                                <li><i class="fas fa-check"></i> Feature 2</li>
+                                <li><i class="fas fa-times"></i> Feature 3</li>
+                                <li><i class="fas fa-times"></i> Feature 4</li>
+                            </ul>
+                            <a href="#" class="btn btn-primary">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-center">
+                        <div class="card-header">
+                            <h5 class="font-weight-bold">Orginal Product</h5>
+                        </div>
+                        <div class="card-body">
+                            <h2 class="card-title">Best Opportunity</h2>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check"></i> Feature 1</li>
+                                <li><i class="fas fa-check"></i> Feature 2</li>
+                                <li><i class="fas fa-check"></i> Feature 3</li>
+                                <li><i class="fas fa-times"></i> Feature 4</li>
+                            </ul>
+                            <a href="#" class="btn btn-primary">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-center">
+                        <div class="card-header">
+                            <h5 class="font-weight-bold">Best Price</h5>
+                        </div>
+                        <div class="card-body">
+                            <h2 class="card-title">Offer price </h2>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check"></i> Feature 1</li>
+                                <li><i class="fas fa-check"></i> Feature 2</li>
+                                <li><i class="fas fa-check"></i> Feature 3</li>
+                                <li><i class="fas fa-check"></i> Feature 4</li>
+                            </ul>
+                            <a href="#" class="btn btn-primary">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="contact">
+        <div class="container text-center">
+            <h2>Contact Us</h2>
+            <p class="lead">Have questions? Reach out to us!</p>
+            <form>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <input type="text" class="form-control" placeholder="Your Name">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <input type="email" class="form-control" placeholder="Your Email">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" rows="4" placeholder="Your Message"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

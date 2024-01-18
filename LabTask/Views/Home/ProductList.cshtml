@@ -1,0 +1,111 @@
+﻿@model List<LabTask.EF.Product>
+
+@{
+    ViewBag.Title = "ProductBuy";
+}
+
+<style>
+    /* Add some styling for the product cards */
+    .product-card {
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        overflow: hidden;
+        transition: transform 0.2s;
+    }
+
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+
+    .product-image {
+        max-height: 150px;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    .card-body {
+        padding: 15px;
+    }
+
+    /* Style for the "Add to Cart" button */
+    .add-to-cart-btn {
+        width: 100%;
+    }
+    .card {
+        margin-bottom: 20px;
+    }
+
+    .product-image-placeholder {
+        background-color: #eee;
+        height: 150px; /* Set a desired height */
+        width: 100%; /* Take full width of the column */
+    }
+</style>
+
+
+<h2 class="text-center">PRODUCT BUY</h2>
+<form method="post">
+
+    <div class="row">
+        @foreach (var product in Model)
+        {
+            <div class="col-md-4 product-card">
+                <div class="card">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4J0BgO8NfYzR36x_UX6WbdEPN8hzHQuF_9g&usqp=CAU" class="card-img-top product-image" alt="@product.Name">
+                           
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">@product.Name</h5>
+                                <p class="card-text">Category: @GetCategoryName(product.C_Id)</p>
+                                <p class="card-text">Price: Tk @product.Price</p>
+
+                                @if (product.Quantity < 1)
+                                {
+                                    <p class="text-danger">Sold Out</p>
+                                }
+                                else
+                                {
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="productCheckbox_@product.Id" name="selectedProducts" value="@product.Id" @(IsProductSelected(product.Id) ? "checked" : "") />
+                                        <label class="form-check-label" for="productCheckbox_@product.Id">
+                                            <span class="btn btn-primary">Add to Cart</span>
+                                        </label>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    <input type="submit" class="btn btn-success" value="Add to Cart" />
+    <a href="/Home/CustomerOrder" class="btn btn-success">Order List</a>
+</form>
+
+@functions {
+    public string GetCategoryName(int categoryId)
+    {
+        var categories = ViewBag.Catagory as List<dynamic>; // Using dynamic for ViewBag
+
+        if (categories != null)
+        {
+            var category = categories.FirstOrDefault(c => c.Id == categoryId);
+            return category != null ? category.Name : "N/A";
+        }
+
+        return "N/A";
+    }
+
+    public bool IsProductSelected(int productId)
+    {
+        string[] selectedProductIds = Session["SelectedProductIds"] as string[];
+
+        return selectedProductIds != null && selectedProductIds.Contains(productId.ToString());
+    }
+}

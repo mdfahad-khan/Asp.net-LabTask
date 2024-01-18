@@ -1,0 +1,43 @@
+﻿@{
+    ViewBag.Title = "Registration";
+}
+<main class="container vh-100 d-flex align-items-center justify-content-center">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card-body bg-light p-5 py-lg-3">
+                <h4 class="text-center mb-4">SIGN UP WITH CUSTOMER INFORMATION</h4>
+                <form action="" method="post">
+                    <div class="mb-3">
+                        <label for="R_name" class="form-label">Customer NAME</label>
+                        <input type="text" name="C_name" placeholder="Name" value="@(Model==null ? "":Model.C_name)" class="form-control" />
+                        <span class="text-danger">@Html.ValidationMessage("Name")</span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="R_ownername" class="form-label">Phone</label>
+                        <input type="text" name="C_phone" placeholder="Phone" class="form-control" value="@(Model==null ? "":Model.C_phone)" />
+                        <span class="text-danger">@Html.ValidationMessage("Phone")</span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="R_address" class="form-label">RESTAURANT ADDRESS</label>
+                        <input type="text" name="C_address" placeholder="Address" class="form-control" value="@(Model==null ?"":Model.C_address)">
+                        <span class="text-danger">@Html.ValidationMessage("Address")</span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="Password" class="form-label">PASSWORD</label>
+                        <input type="password" name="Password" placeholder="Password" class="form-control" value="@(Model==null ?"":Model.Password)">
+                        <span class="text-danger">@Html.ValidationMessage("Password")</span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="Confirm_Password" class="form-label">CONFIRM PASSWORD</label>
+                        <input type="password" name="Confirm_Password" placeholder="Confirm Password" class="form-control" value="@(Model == null ? "" : Model.Confirm_Password)" />
+                        <span class="text-danger">@Html.ValidationMessage("Confirm_Password")</span>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-success">Sign Up</button>
+                    </div>
+                </form>
+                <h6 class="text-center mt-3">Already have an account? <a href="/Home/Login">Login</a></h6>
+            </div>
+        </div>
+    </div>
+</main>

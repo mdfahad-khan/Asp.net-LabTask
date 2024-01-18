@@ -1,0 +1,110 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .about-section {
+            background-image: linear-gradient(to right, #434343 0%, black 100%);
+            color: #fff;
+            padding: 80px 0;
+        }
+
+        .feature-section {
+            margin-top: 50px;
+        }
+
+        .feature-card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+            .feature-card:hover {
+                transform: scale(1.05);
+            }
+    </style>
+    <title>About Us</title>
+</head>
+<body>
+
+    <div class="container-fluid about-section">
+        <div class="container">
+            <div class="row">
+                <!-- Left Side: Heading "About Us" -->
+                <div class="col-md-6 ">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSk32OPof-i-VQJX1iqmiBj_50OWSPFFMGZs6ELN80IPfk1mv2MvFynUBaC-Ho_l1tAcgU&usqp=CAU" alt="About Us Image" class="card-img">
+                </div>
+
+                <!-- Right Side: Content -->
+                <div class="col-md-6">
+                    <h1 class="mb-4">About Us</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis commodo, libero eget sagittis fermentum, ex elit dignissim lacus. Integer condimentum est at semper feugiat. Vivamus egestas congue justo, a tincidunt justo efficitur at. Etiam nec facilisis purus. Sed ut quam sit amet libero rhoncus pellentesque.</p>
+
+                    <!-- New Feature Section -->
+                    <h4 class="mt-4 mb-3">Additional Features</h4>
+                    <div class="row feature-section text-black">
+                        <div class="col-md-4 mb-4">
+                            <div class="card feature-card">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Scalability</h5>
+                                    <p class="card-text">Easily scalable for future growth.</p>
+                                    <i class="fas fa-chart-line fa-3x"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card feature-card ">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Security</h5>
+                                    <p class="card-text">Ensures data protection and user privacy.</p>
+                                    <i class="fas fa-shield-alt fa-3x"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card feature-card">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">User Friendly</h5>
+                                    <p class="card-text">Simple and intuitive for all users.</p>
+                                    <i class="fas fa-smile-beam fa-3x"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Add more features as needed -->
+                    </div>
+
+                    <!-- Company History Section -->
+                    <h4 class="mt-4 mb-3">Our History</h4>
+                    <ul class="timeline">
+                        <li class="timeline-event">
+                            <h5>2005: Company Founded</h5>
+                            <p>Fahad and Sahilur  started the company.</p>
+                        </li>
+                        <li class="timeline-event">
+                            <h5>2010: Expansion</h5>
+                            <p>Opened new branches in multiple cities.</p>
+                        </li>
+                        <!-- Add more history events as needed -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewBag.Title = "CustomerOrder";
+}
+
+
+<h2 class="text-center">ORDER VIEW</h2>
+
+<form method="post">
+
+    <table border="1" class="table table-hover table-striped table-bordered">
+        <thead class="table-success ">
+
+            <tr>
+
+                <td> Customer Name</td>
+
+                <td>Order Id</td>
+
+                <td>Details</td>
+            </tr>
+            </thead>
+            @foreach (var order in Model)
+            {
+                <tr>
+                    <td>@order.Customer_Name</td>
+                    <td>@order.Id </td>
+                    <td><a href="/Home/OrderDetails/@order.Id" class="btn btn-success">Details</a> </td>
+                </tr>
+            }
+
+
+
+
+
+
+            }
+
+    </table>
+
+</form>
+<a href="/Home/ProductList" class="btn btn-success">Back</a>
+
+
+
+

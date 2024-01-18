@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Contact Us</title>
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .contact-container {
+            margin-top: 50px;
+        }
+
+        .contact-info {
+            background-image: linear-gradient(to right, #141e30, #243b55);
+            color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .map-responsive {
+            overflow: hidden;
+            padding-bottom: 56.25%;
+            position: relative;
+            height: 0;
+        }
+
+            .map-responsive iframe {
+                left: 0;
+                top: 0;
+                height: 100%;
+                width: 100%;
+                position: absolute;
+            }
+
+        .social-links a {
+            color: #007bff;
+            margin-right: 15px;
+            transition: color 0.3s ease-in-out;
+        }
+
+            .social-links a:hover {
+                color: #0056b3;
+            }
+    </style>
+</head>
+<body>
+
+    <div class="container contact-container">
+        <div class="row">
+            <!-- Left Side: Contact Information -->
+            <div class="col-md-6">
+                <div class="contact-info">
+                    <h2>Contact Us</h2>
+                    <p><strong>Name:</strong> Md Fahad Khan</p>
+                    <p><strong>Address:</strong> Khilkeht Dhaka Bangladesh</p>
+                    <p><strong>Email:</strong> mdfahadkhan01701@gmail.com</p>
+                    <div class="social-links mt-3 ">
+                        <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <!-- Add more social media links as needed -->
+                    </div>
+                </div>
+                <div class="map-responsive mt-4">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.678901234567!2d-71.0569184!3d42.3600825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e3651d0aadf3d1%3A0xbbd57a0b2acbd90c!2sCityville%2C%20State%2C%2012345!5e0!3m2!1sen!2sus!4v1637050901234!5m2!1sen!2sus" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <!-- Right Side: Contact Form and Map -->
+            <div class="col-md-6">
+                <div class="contact-form">
+                    <h2>Send us a message</h2>
+                    <form action="#" method="post">
+                        <div class="form-group">
+                            <label for="name">Your Name:</label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email:</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject:</label>
+                            <input type="text" class="form-control" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message:</label>
+                            <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send</button>
+                    </form>
+                </div>
+
+                <!-- Map Section -->
+               
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

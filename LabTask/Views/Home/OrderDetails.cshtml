@@ -1,0 +1,73 @@
+﻿
+@{
+    ViewBag.Title = "OrderDetails";
+}
+
+<h2 class="text-center">ORDER DETAILS</h2>
+
+<form method="post">
+
+    <table border="1" class="table  table-hover table-striped table-bordered">
+        <thead class="table-success">
+
+            <tr>
+
+                <td> Product Id</td>
+                <td> Product Name</td>
+                <td> Product Category</td>
+
+                <td>Product Price</td>
+                <td>Order Status</td>
+
+             </thead>
+            </tr>
+
+            @foreach (var product in Model)
+            {
+                <tr>
+                    <td>@product.Id</td>
+                    <td>@product.Name </td>
+                    @foreach (var cat in ViewBag.category)
+                    {
+                        if (cat.Id == product.C_Id)
+                        {
+                            <td>@cat.Name</td>
+                        }
+                    }
+                    <td>@product.Price</td>
+                    @foreach (var productOrder in ViewBag.productOrder)
+                    {
+                        if (product.Id == productOrder.P_Id)
+                        {
+                            if (productOrder.Status != "Pending")
+                            {
+                                <td>@productOrder.Status</td>
+                            }
+                            else
+                            {
+                                <td><a href="/Home/CancleOrder/@productOrder.Id " class="btn btn-success">Cancle + @productOrder.Id +@productOrder.O_Id</a> </td>
+
+                            }
+
+
+                        }
+
+
+
+                    }
+                </tr>
+            }
+
+
+            }
+
+    </table>
+
+</form>
+<a href="/Home/ProductList" class="btn btn-success">Back</a>
+
+
+
+
+
+

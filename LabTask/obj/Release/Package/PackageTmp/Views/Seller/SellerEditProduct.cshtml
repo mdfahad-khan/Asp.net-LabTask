@@ -1,0 +1,71 @@
+﻿@{
+    ViewBag.Title = "SellerEditProduct";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Seller Edit Product</title>
+    <style>
+        body {
+            margin-top:50px;
+            min-height: 80vh;
+            align-items: center;
+            justify-content: center;
+            background-color: #f8f9fa; /* Light gray background */
+        }
+
+        .card {
+            max-width: 500px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container mt-4">
+        <div class="card">
+            <div class="card-body">
+                <h2 class="text-center mb-4">Edit Product</h2>
+
+                <form action="" method="post">
+                    <div class="form-group">
+                        <label for="Name">Name:</label>
+                        <input type="text" class="form-control" name="Name" id="Name" placeholder="Name" value="@Model.Name">
+                    </div>
+                    <input type="hidden" name="Id" value="@Model.Id">
+
+                    <div class="form-group">
+                        <label for="Price">Price:</label>
+                        <input type="text" class="form-control" name="Price" id="Price" placeholder="Price" value="@Model.Price">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Quantity">Quantity:</label>
+                        <input type="text" class="form-control" name="Quantity" id="Quantity" placeholder="Quantity" value="@Model.Quantity">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="C_Id">Category:</label>
+                        <select class="form-control" name="C_Id" id="C_Id">
+                            <option selected disabled>Categories</option>
+                            @foreach (var category in ViewBag.Catagory)
+                            {
+                                <option value="@category.Id">@category.Name</option>
+                            }
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block">Save</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

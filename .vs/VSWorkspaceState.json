@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\LabTask",
+    "\\LabTask\\Controllers",
+    "\\LabTask\\Views",
+    "\\LabTask\\Views\\Home",
+    "\\LabTask\\Views\\Login"
+  ],
+  "SelectedNode": "\\LabTask\\Controllers\\HomeController.cs",
+  "PreviewInSolutionExplorer": false
+}

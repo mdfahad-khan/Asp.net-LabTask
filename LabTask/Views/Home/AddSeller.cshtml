@@ -1,0 +1,53 @@
+﻿@{
+    ViewBag.Title = "AddSeller";
+}
+
+<main class="container vh-100 d-flex align-items-center justify-content-center">
+    <div class="col-md-8">
+        <div class="card p-4 " style="background-color: #a5b1c2; ">
+            <h2 class="text-center mb-4">ADD Seller</h2>
+            <form action="" method="post">
+                <div class="mb-3">
+                    <label for="S_name" class="form-label">Seller Name</label>
+                    <input type="text" name="S_name" placeholder="Name" value="@(Model?.S_name ?? "")" class="form-control" />
+                    <span class="text-danger">@Html.ValidationMessage("Name")</span>
+                </div>
+
+                <div class="mb-3">
+                    <label for="S_address" class="form-label">Address</label>
+                    <input type="text" name="S_address" placeholder="Address" class="form-control" value="@(Model?.S_address ?? "")">
+                    <span class="text-danger">@Html.ValidationMessage("Address")</span>
+                </div>
+                <div class="mb-3">
+                    <label for="S_phone" class="form-label">Phone Number</label>
+                    <input type="text" name="S_phone" placeholder="Phone Number" class="form-control" value="@(Model?.S_phone ?? "")">
+                    <span class="text-danger">@Html.ValidationMessage("Phone_Number")</span>
+                </div>
+                <div class="mb-3">
+                    <fieldset>
+                        <label>Gender :</label>
+                        <input type="radio" name="S_gender" value="Male" @(Model?.S_gender == "Male" ? "checked" : "") /> Male
+                        <input type="radio" name="S_gender" value="Female" @(Model?.S_gender == "Female" ? "checked" : "") /> Female
+                    </fieldset>
+                    <span class="text-danger">@Html.ValidationMessage("Gender")</span>
+                </div>
+                <div class="mb-3">
+                    <label for="Password" class="form-label">Password</label>
+                    <input type="password" name="Password" placeholder="Password" class="form-control" value="@(Model?.Password ?? "")">
+                    <span class="text-danger">@Html.ValidationMessage("Password")</span>
+                </div>
+                <div class="mb-3">
+                    <label for="Confirm_Password" class="form-label">Confirm Password</label>
+                    <input type="password" name="Confirm_Password" placeholder="Confirm Password" class="form-control" value="@(Model?.Confirm_Password ?? "")" />
+                    <span class="text-danger">@Html.ValidationMessage("Confirm_Password")</span>
+                </div>
+
+                <div class="text-center">
+                    <input type="submit" value="ADD Seller" class="btn btn-success" />
+                </div>
+            </form>
+        </div>
+        <div>
+        </div>
+    </div>
+</main>
